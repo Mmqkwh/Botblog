@@ -1,13 +1,14 @@
-import pages from '@hono/vite-cloudflare-pages'
+import build from '@hono/vite-build/cloudflare-pages'
+import devServer from '@hono/vite-dev-server'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    pages({
+    build({
+      entry: 'index.tsx'
+    }),
+    devServer({
       entry: 'index.tsx'
     })
-  ],
-  build: {
-    outDir: 'dist'
-  }
+  ]
 })
