@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     pages({
-      entry: 'src/index.tsx'
+      entry: 'index.tsx'
     })
   ],
   build: {
